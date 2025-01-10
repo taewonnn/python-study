@@ -87,5 +87,10 @@ print('==========')
 # 이중 for문
 for i in range(1,10):
   for a in range(1,10):
-    print(a * i)
+    print( a * i)
 
+
+# f-string
+for i in range(1,10):
+  for a in range(1,10):
+    print(f"{i} * {a} = {i *a}")
