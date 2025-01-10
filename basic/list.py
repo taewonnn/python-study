@@ -37,7 +37,11 @@ print(car2.pop()) # 100000
 
 
 # Dictionary - 객체
-car3 = {'brand': 'kia','model':'ddd', 'price':'10000' }
+car3 = {
+  'brand': 'kia',
+  'model':'ddd', 
+  'price':'10000' 
+}
 
 print(car3['brand']) # kia
 
