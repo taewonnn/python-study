@@ -26,6 +26,24 @@ print('거래량: ',soup.find_all('span',id='_quant')[0].text)
 print('거래량: ',soup.find_all('span',class_='tah')[5].text)
 
 
+print('현재가: ',soup.find_all('span', class_='blind')[14].text)
+
+
+# selector
+
+# class
+# print(soup.select('.f_down'))
+# id
+# print(soup.select('#_nowVal'))
+# 태그
+# print(soup.select('strong'))
+
+# > >
+print(soup.select('.gray .f_down em')[0].text)
+
+# 이미지 수집
+img = soup.select('#img_chart_area')[0]
+print(img['src']) # https://ssl.pstatic.net/imgfinance/chart/item/area/day/005930.png?sidcode=1736493365250
 
 
 
