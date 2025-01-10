@@ -48,3 +48,24 @@ print(img['src']) # https://ssl.pstatic.net/imgfinance/chart/item/area/day/00593
 
 
 
+print('---------------------')
+
+sub = ['005930', '066575', '005380', '035720', '034220', '003490']
+
+
+# 함수로 변경
+# =>  f'문자열{}'
+def crawlingValue (code) :
+  data = requests.get(f'https://finance.naver.com/item/sise.nhn?code={code}')
+  
+  soup = BeautifulSoup(data.content, 'html.parser')
+  price = soup.select('#_nowVal')[0].text
+  print(soup.select('#_nowVal')[0].text)
+  return price
+
+
+
+f = open('a.csv', 'w')
+for i in range(6) :
+  f.write('\n' + crawlingValue(sub[i]))
+f.close()
