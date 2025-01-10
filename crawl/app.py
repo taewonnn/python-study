@@ -69,3 +69,8 @@ f = open('a.csv', 'w')
 for i in range(6) :
   f.write('\n' + crawlingValue(sub[i]))
 f.close()
+
+g = open('b.csv', 'w')
+for i in sub :
+  g.write('\n' + crawlingValue(i))
+g.close()
