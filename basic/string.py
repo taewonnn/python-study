@@ -1,31 +1,34 @@
-print('text')
+print("text")
 
-print('-----')
+print("-----")
 
 # 줄바꿈 '''
-print('''
+print(
+    """
 Hello
 world
-''') 
+"""
+)
 # Hello
 # world
 
-print("""
+print(
+    """
 Hello
 !!!
-""") 
+"""
+)
 # Hello
 # !!!
-print('-----')
+print("-----")
 
 
-print('string:','1' + '1') #11
-print('hello world' * 20)
+print("string:", "1" + "1")  # 11
+print("hello world" * 20)
 
 
 # len
-print(len('hello world' * 20)) #220
+print(len("hello world" * 20))  # 220
 
 # replace
-print('hello world'.replace('world', 'univers')) # hello univers
-
+print("hello world".replace("world", "univers"))  # hello univers

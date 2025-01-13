@@ -1,11 +1,11 @@
 # for - 반복문
 
 # for i in range(반복횟수)
-message = 'bmw!!'
+message = "bmw!!"
 
 for i in range(10):
-  print(i)
-  print(message)
+    print(i)
+    print(message)
 
 # 0
 # bmw!!
@@ -29,13 +29,13 @@ for i in range(10):
 # bmw!!
 
 
-# list / dictionary 하나씩 
-list = ['bmw', 'k5', 'genesis']
+# list / dictionary 하나씩
+list = ["bmw", "k5", "genesis"]
 
 
 # list length만큼 반복
 for i in list:
-  print(i)
+    print(i)
 
 # bmw
 # k5
@@ -43,7 +43,7 @@ for i in list:
 
 
 for car in list:
-  print(car + '!!!!')
+    print(car + "!!!!")
 
 # bmw!!!!
 # k5!!!!
@@ -51,46 +51,44 @@ for car in list:
 
 
 # 0부터 3까지
-for car in range(0,3):
-  print('안녕')
-  
+for car in range(0, 3):
+    print("안녕")
+
 # 안녕
 # 안녕
 # 안녕
 
 
 dic = {
-  '1': 111,
-  '2': 222,
-  '3': 333,
+    "1": 111,
+    "2": 222,
+    "3": 333,
 }
 
 for u in dic:
-  print(u)
-  
+    print(u)
+
 # 1
 # 2
 # 3
 
 
-
 # Ex.
 
-print('==========')
-for i in range(1,10):
-  print(i *2)
+print("==========")
+for i in range(1, 10):
+    print(i * 2)
 
-print('==========')
-
+print("==========")
 
 
 # 이중 for문
-for i in range(1,10):
-  for a in range(1,10):
-    print( a * i)
+for i in range(1, 10):
+    for a in range(1, 10):
+        print(a * i)
 
 
 # f-string
-for i in range(1,10):
-  for a in range(1,10):
-    print(f"{i} * {a} = {i *a}")
+for i in range(1, 10):
+    for a in range(1, 10):
+        print(f"{i} * {a} = {i *a}")
