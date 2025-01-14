@@ -19,5 +19,14 @@
 
 # "ad"가 부분 문자열로 들어간 문자열이 존재하지 않습니다. 따라서 원래 배열을 그대로 return 합니다.
 
+
 def solution(strArr):
     return [word for word in strArr if 'ad' not in word]
+  
+  
+def solution(strArr):
+  return [item for item in strArr if 'ad' not in item]
+  
+# [변수 for 변수 in 리스트 if 조건]
+# for item in strArr: strArr의 각 요소를 item 할당하면서 반복
+# if 'ad' not in item: item 'ad'가 포함되지 않으면 리스트에 추가
