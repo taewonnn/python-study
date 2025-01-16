@@ -17,37 +17,27 @@ def extract_count(name):
         return int(match.group(1).replace(',', ''))  # 쉼표 제거 후 정수형 변환
     return 0
 
-# 배열 형식으로 데이터 초기화
-categories = []
+# 공통 로직 함수: 데이터 수집
+def extract_data(prefix):
+    data = []
+    for store_input in soup.find_all("input", id=lambda x: x and x.startswith(prefix)):
+        name = store_input['data-name']
+        code = store_input['data-code']
+        count = extract_count(name)  # 숫자 추출
+        data.append({"name": name, "code": code, "count": count})
+    return data
 
-# 카테고리 별 데이터(이름 + 개수 + 고유번호) - 스토어
-store_data = []
-for store_input in soup.find_all("input", id=lambda x: x and x.startswith("loc_target_plus_store_")):
-    name = store_input['data-name']
-    code = store_input['data-code']
-    count = extract_count(name)  # 숫자 추출
-    store_data.append({"name": name, "code": code, "count": count})
+# 데이터 수집
+store_data = extract_data("loc_target_plus_store_")
+multiplex_data = extract_data("loc_target_plus_multiplex_")
+brand_data = extract_data("loc_target_plus_brand_")
 
-# 카테고리 별 데이터(이름 + 개수 + 고유번호) - 복합몰
-multiplex_data = []
-for store_input in soup.find_all("input", id=lambda x: x and x.startswith("loc_target_plus_multiplex_")):
-    name = store_input['data-name']
-    code = store_input['data-code']
-    count = extract_count(name)  # 숫자 추출
-    multiplex_data.append({"name": name, "code": code, "count": count})
-
-# 카테고리 별 데이터(이름 + 개수 + 고유번호) - 브랜드
-brand_data = []
-for store_input in soup.find_all("input", id=lambda x: x and x.startswith("loc_target_plus_brand_")):
-    name = store_input['data-name']
-    code = store_input['data-code']
-    count = extract_count(name)  # 숫자 추출
-    brand_data.append({"name": name, "code": code, "count": count})
-
-# 최종 배열 구성
-categories.append({"store": store_data})
-categories.append({"multiplex": multiplex_data})
-categories.append({"brand": brand_data})
+# 최종 배열 구성 (요구한 형태로 변환)
+categories = [
+    {"category": "Store", "items": store_data},
+    {"category": "Multiplex", "items": multiplex_data},
+    {"category": "Brand", "items": brand_data},
+]
 
 # JSON 파일로 저장
 with open('spot.json', 'w', encoding='UTF-8') as file:

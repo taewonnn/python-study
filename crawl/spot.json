@@ -1,6 +1,7 @@
 [
   {
-    "store": [
+    "category": "Store",
+    "items": [
       {
         "name": "한식(31,864)",
         "code": "_060300ff",
@@ -1019,7 +1020,8 @@
     ]
   },
   {
-    "multiplex": [
+    "category": "Multiplex",
+    "items": [
       {
         "name": "초등학교(18,040)",
         "code": "_0801ffff",
@@ -1293,7 +1295,8 @@
     ]
   },
   {
-    "brand": [
+    "category": "Brand",
+    "items": [
       {
         "name": "씨유(5,962)",
         "code": "359",
