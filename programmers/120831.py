@@ -23,3 +23,15 @@ def solution(n):
   return sum([i for i in range(2, n + 1, 2)])
 
 
+# range(2, n + 1, 2): 2부터 n까지 짝수만 생성 (2, 4, 6, 8, ...)
+# [i for i in ...]: 리스트를 생성 ([2, 4, 6, 8, ...])
+# sum(...): 리스트에 있는 모든 숫자를 더함
+
+
+
+# for문
+def solution2(n):
+    total = 0
+    for i in range(2, n + 1, 2):  # 2부터 n까지 2씩 증가 (짝수만)
+        total += i  # total에 더하기
+    return total
