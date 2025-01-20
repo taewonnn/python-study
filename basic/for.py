@@ -6,6 +6,28 @@
 #     수행할_문장2
 #     ...
 
+
+def solution(n):
+    total = 0
+    for i in range(2, n + 1, 2):  # 2부터 n까지 2씩 증가 (짝수만)
+        total += i  # total에 더하기
+    return total
+
+# ✅ 코드 실행 과정 (n = 10일 때)
+i = 2, total = 2
+i = 4, total = 2 + 4 = 6
+i = 6, total = 6 + 6 = 12
+i = 8, total = 12 + 8 = 20
+i = 10, total = 20 + 10 = 30
+
+
+# range(start, stop, step)
+
+# start: 시작 숫자 (포함됨)
+# stop: 끝 숫자 (포함되지 않음)
+# step: 증가하는 값 (기본값은 1)
+
+
 # for i in range(반복횟수)
 message = "bmw!!"
 
