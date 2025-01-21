@@ -7,6 +7,26 @@
 #     ...
 
 
+# 기본적인 리스트 순회
+arr = [1,2,3,4]
+for num in arr:
+    print(num)
+    
+
+# index랑 같이 가져오기 - enumerate()
+arr = ["apple", "banana", "cherry"]
+for idx, value in enumerate(arr):
+    print(f"Index: {idx}, Value: {value}")
+
+#결과
+# Index: 0, Value: apple
+# Index: 1, Value: banana
+# Index: 2, Value: cherry
+
+    
+
+
+
 def solution(n):
     total = 0
     for i in range(2, n + 1, 2):  # 2부터 n까지 2씩 증가 (짝수만)
@@ -26,6 +46,11 @@ i = 10, total = 20 + 10 = 30
 # start: 시작 숫자 (포함됨)
 # stop: 끝 숫자 (포함되지 않음)
 # step: 증가하는 값 (기본값은 1)
+
+
+
+
+
 
 
 # for i in range(반복횟수)
