@@ -23,7 +23,24 @@ for idx, value in enumerate(arr):
 # Index: 1, Value: banana
 # Index: 2, Value: cherry
 
-    
+
+# 리스트의 짝수 요소만 가져오기
+
+# range(start, stop, step)
+
+# start: 시작 숫자 (포함됨)
+# stop: 끝 숫자 (포함되지 않음)
+# step: 증가하는 값 (기본값은 1)
+
+arr = [10, 20, 30, 40, 50, 60]
+for i in range(0, len(arr), 2):
+    print(arr[i])
+
+
+# 결과
+# 10
+# 30
+# 50
 
 
 
