@@ -43,6 +43,19 @@ for i in range(0, len(arr), 2):
 # 50
 
 
+# 리스트 거꾸로 순회
+arr = [1, 2, 3, 4, 5]
+for num in reversed(arr):
+    print(num)
+
+#결과
+# 5
+# 4
+# 3
+# 2
+# 1
+
+
 
 def solution(n):
     total = 0
