@@ -56,6 +56,22 @@ for num in reversed(arr):
 # 1
 
 
+# 두개 리스트 동시에 순회
+names = ["Alice", "Bob", "Charlie"]
+scores = [90, 80, 85]
+
+for name, score in zip(names, scores):
+    print(f"{name}: {score}")
+    
+#결과 
+# Alice: 90
+# Bob: 80
+# Charlie: 85
+
+
+
+
+
 
 def solution(n):
     total = 0
