@@ -69,6 +69,19 @@ for name, score in zip(names, scores):
 # Charlie: 85
 
 
+# 리스트에서 특정 조건값만 찾기
+arr = [5, 10, 15, 20, 25]
+for num in arr:
+    if num > 10:
+        print(num)
+        
+
+#결과
+15
+20
+25
+
+
 
 
 
