@@ -82,6 +82,13 @@ for num in arr:
 25
 
 
+# 리스트 내포(List Comprehension)로 빠르게 필터링
+arr = [5, 10, 15, 20, 25]
+filtered = [num for num in arr if num > 10]
+print(filtered)
+
+# 결과 : [15, 20, 25]
+
 
 
 
