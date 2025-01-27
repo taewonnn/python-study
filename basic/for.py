@@ -91,6 +91,17 @@ print(filtered)
 
 
 
+# dictionary 순회
+data = {"Alice": 90, "Bob": 80, "Charlie": 85}
+for key, value in data.items():
+    print(f"{key}: {value}")
+    
+
+#결과
+# Alice: 90
+# Bob: 80
+# Charlie: 85
+
 
 
 def solution(n):
