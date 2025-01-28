@@ -128,8 +128,6 @@ i = 10, total = 20 + 10 = 30
 
 
 
-
-
 # for i in range(반복횟수)
 message = "bmw!!"
 
