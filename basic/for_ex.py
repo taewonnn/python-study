@@ -114,3 +114,24 @@ i = 10, total = 20 + 10 = 30
 # start: 시작 숫자 (포함됨)
 # stop: 끝 숫자 (포함되지 않음)
 # step: 증가하는 값 (기본값은 1)
+
+
+# 이중 for문
+for i in range(1, 10):
+  for a in range(1, 10):
+    print(a * i)
+    
+    
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+for row in matrix:
+    for num in row:
+        print(num, end=" ")
+        
+        
+# 결과 1 2 3 4 5 6 7 8 9
