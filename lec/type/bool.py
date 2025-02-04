@@ -57,12 +57,31 @@ pass
 # 삼항 연산자 Ternary Operators
 # {참일 때 값} if {조건} else {거짓일 때 값}
 
-ternary_1 = 1 if True else 2
+ternary_1 = 1 if True else 2  #1
 
 use_kor = True
-ternary_2 = "안녕" if use_kor else "Hello"
+ternary_2 = "안녕" if use_kor else "Hello" # "안녕"
 
 num = 12
-ternary_3 = "홀수" if num % 2 else "짝수"
+ternary_3 = "홀수" if num % 2 else "짝수" # "짝수"
 
 pass
+
+
+# 단축 평가
+# 💡 불필요한 연산을 줄이기 위한 기능
+#
+# - `and` 연산 : 앞의 것이 `False` 면 뒤의 것 확인 연산할 필요 없음
+# - `or` 연산 : 앞의 것이 `True` 면 뒤의 것 확인 연산할 필요 없음
+
+a = 10 % 2
+a and print("10은 홀수")
+
+b = 11 % 2
+b and print("11은 홀수")
+
+c = 10 % 2
+c or print("10은 짝수")
+
+d = 11 % 2
+d or print("11은 짝수")
