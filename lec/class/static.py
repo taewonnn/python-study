@@ -84,3 +84,30 @@ print(store_3.intro())
 
 pass
 
+
+
+class Button:
+    dark_mode = False
+    
+    def __init__(self, imprint, spaces):
+        self.imprint = imprint
+        self.spaces = spaces
+        
+    @classmethod
+    def toggle_darak_mode(cls):
+        cls.dark_mode = not cls.dark_mode
+        
+
+buttons = [
+    Button("0", 2),
+    Button("1", 1),
+    Button("=", 3)
+]
+
+mode_before = Button.dark_mode
+print(mode_before) # False
+
+
+Button.toggle_darak_mode()
+mode_after = Button.dark_mode
+print(mode_after) # True
