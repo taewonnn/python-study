@@ -20,9 +20,9 @@ print(dic['data'][1]['Close'])
 
 
 # 반복문
-for i in range(200):
-  print('종가',dic['data'][i]['Close'])
-  format_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(dic['data'][i]['DT']/1000))
+for item in dic['data']:
+  print('종가',item['Close'])
+  format_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(int(item['DT'])/1000))
   print('시간',format_time)
 
 
